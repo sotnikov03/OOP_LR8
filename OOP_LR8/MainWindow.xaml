@@ -1,0 +1,42 @@
+﻿<Window x:Class="OOP_LR8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Matrix Generator" Height="500" Width="600"
+        Background="#FFFAFAFA" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True">
+    <Border CornerRadius="10" Background="#FFFFFFFF" BorderBrush="#DDDDDD" BorderThickness="1">
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            
+            <DockPanel Background="#FF6200EE" Width="540" Height="40" VerticalAlignment="Top">
+                <TextBlock Text="Генератор матриц" Foreground="White" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="10,0"/>
+                <Button Content="X" Width="40" Height="40" HorizontalAlignment="Right" Background="Transparent" Foreground="White"
+                        BorderThickness="0" FontSize="14" FontWeight="Bold" Click="CloseButton_Click"/>
+            </DockPanel>
+
+            
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="20,10,0,0" Grid.Row="1" HorizontalAlignment="Left">
+                <ComboBox Name="StrategySelector" Width="200" Margin="0,0,10,0" HorizontalAlignment="Left" Height="30"/>
+                <Button Content="Генерировать" Width="120" Height="30" Background="#6200EE" Foreground="White" FontSize="14" BorderThickness="0" 
+                        HorizontalAlignment="Left" Click="GenerateButton_Click"/>
+            </StackPanel>
+
+            <DockPanel Background="#FF6200EE" Height="40" Width="540" VerticalAlignment="Center" Margin="0,250,0,0" Grid.Row="1">
+                <TextBlock Text="Результаты:" Foreground="White" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" Margin="10,0"/>
+            </DockPanel>
+            
+            
+            <TextBox Name="MatrixDisplay" Grid.Row="1" Margin="20,50,20,20" VerticalAlignment="Top" TextWrapping="Wrap" IsReadOnly="True"
+                     Height="200" Background="#FFF5F5F5" BorderBrush="#6200EE" BorderThickness="1" FontSize="12" Padding="5"/>
+
+           
+            <TextBox Name="ResultDisplay" Grid.Row="2" Margin="20,0,20,20" Height="100" TextWrapping="Wrap" IsReadOnly="True"
+                     Background="#FFF5F5F5" BorderBrush="#6200EE" BorderThickness="1" FontSize="12" Padding="5" VerticalAlignment="Bottom"/>
+        </Grid>
+    </Border>
+</Window>
